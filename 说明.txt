@@ -1,0 +1,31 @@
+﻿# Physic_GNN
+
+Code implementation for : [Hydrogen jet diffusion modeling by using physics-informed graph neural network and sparsely-distributed sensor data]
+
+
+# Installation
+## Requirements
+* Python >= 3.6
+* cuda == 10.2
+* Tensorflow == 1.14.0
+
+
+# Usage
+Three case studies are listed on low-pressure subsonic vertical jets, high-pressure under-expanded vertical jets, and high-pressure under-expanded horizontal jets.
+The following is an example of how the algorithm is used for the prediction of a low pressure subsonic vertical hydrogen jet.
+
+## Dataset
+ |-竖直-低压
+ | |-低压竖直射流实验数据.csv   # training data
+ | |-fig    # Prediction centerline concentration curves as a function of dimensionless axial distance by Physic_GNN and PINN
+ | |-fig_u    # Prediction centerline velocity curves as a function of dimensionless axial distance by Physic_GNN and PINN
+ | |-PIGNN    # Predicted results by Physic_GNN
+ | |-PINN    # Predicted results by PINN
+
+## Run
+PIGNN.py  # Physic_GNN
+PINN.py  # PINN
+**Default settings**:  
+* Training configs: 
+    * N_units = 30
+    * epochs = 10000
